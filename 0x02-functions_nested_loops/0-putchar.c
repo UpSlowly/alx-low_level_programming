@@ -1,8 +1,7 @@
 #include "main.h"
 /**
- *  main -Entry point
- *
- *  Return: Always 0 (Success)
+ *  main - Print _putchar
+ *  Return: Always 0
  */
 int main(void)
 {
@@ -11,6 +10,5 @@ int put;
 for (put = 0; put < 8; put++)
 _putchar(string[put]);
 _putchar('\n');
-
 return (0);
 }
