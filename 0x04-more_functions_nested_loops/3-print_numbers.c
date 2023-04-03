@@ -6,14 +6,12 @@
  *
  * Return: is zero
  */
-
 void print_numbers(void)
 {
-	char digits;
-
-	for (digits = '0'; digits <= '9'; digits++)
-	{
-		_putchar(digits);
-	}
-	_putchar('\n');
+int i;
+for (i = 0; i < 10; i++)
+{
+_putchar(i + '0');
+}
+_putchar('\n');
 }
