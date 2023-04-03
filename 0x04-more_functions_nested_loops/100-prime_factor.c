@@ -9,29 +9,24 @@
  */
 long int largest_prime_factor(long int n)
 {
-    long int factor = 2;
-
-    while (factor * factor <= n)
-    {
-        if (n % factor == 0)
-        {
-            n /= factor;
-        }
-        else
-        {
-            factor++;
-        }
-    }
-
-    return n;
+long int factor = 2;
+while (factor * factor <= n)
+{
+if (n % factor == 0)
+{
+n /= factor;
 }
-
+else
+{
+factor++;
+}
+}
+return (n);
+}
 int main(void)
 {
-    long int n = 612852475143;
-    long int largest_factor = largest_prime_factor(n);
-
-    printf("%ld\n", largest_factor);
-
-    return 0;
+long int n = 612852475143;
+long int largest_factor = largest_prime_factor(n);
+printf("%ld\n", largest_factor);
+return (0);
 }
