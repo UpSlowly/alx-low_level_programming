@@ -10,21 +10,21 @@
 
 char *rot13(char *str)
 {
-    int i, j;
-    char *rot = str;
-    char *from = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
-    char *to = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
+int i, j;
+char *rot = str;
+char *from = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+char *to = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 
-    for (i = 0; str[i]; i++)
-    {
-        for (j = 0; from[j]; j++)
-        {
-            if (str[i] == from[j])
-            {
-                rot[i] = to[j];
-                break;
-            }
-        }
-    }
-    return rot;
+for (i = 0; str[i]; i++)
+{
+for (j = 0; from[j]; j++)
+{
+if (str[i] == from[j])
+{
+rot[i] = to[j];
+break;
+}
+}
+}
+return (rot);
 }
