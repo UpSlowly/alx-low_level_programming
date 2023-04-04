@@ -5,10 +5,9 @@
  */
 int main(void)
 {
-for (int i = 0; i < 10; i++)
-{
-putchar(i + '0');
-}
+char digit;
+for (digit = '0'; digit <= '9'; digit++)
+putchar(digit);
 printf("\n");
 return (0);
 }
