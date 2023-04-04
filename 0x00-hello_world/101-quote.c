@@ -6,7 +6,8 @@
  */
 int main(void)
 {
-char artisusf[] = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
-write(1, artisusf, 60);
-return (1);
+char msg[] = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
+ssize_t nbytes = sizeof(msg) - 1;
+ssize_t nwritten = write(STDERR_FILENO, msg, nbytes);
+return ((nwritten == nbytes) ? 1 : 0);
 }
