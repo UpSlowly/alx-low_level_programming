@@ -1,15 +1,13 @@
 #include <stdio.h>
 /**
-* main - Print numbers from "0" to "9"
-* Return: 0 for success
-*/
-int main(void)
+ * main - Print numbers from "0" to "9"
+ * Return: 0 for success
+ */
+int main()
 {
-int singdgt = 0;
-while (singdgt <= 10)
+for (int i = 0; i < 10; i++)
 {
-printf("%i ", singdgt);
-singdgt++;
+putchar(i + '0');
 }
 printf("\n");
 return (0);
