@@ -1,18 +1,24 @@
 #include <stdio.h>
+#include <time.h>
+#include <stdlib.h>
 
 /**
-* main - Print Numbers Hexadecimal
-*
-* Return: 0 for success
-*
-**/
+ * main - Print Numbers Hexadecimal
+ *
+ * Return: 0 for success
+ *
+ **/
 
 int main(void)
 {
-for (int i = 0; i < 16; i++)
+char ch;
+for (ch = '0'; ch <= '9'; ch++)
 {
-int c = i < 10 ? i + '0' : i - 10 + 'a';
-putchar(c);
+putchar(ch);
+}
+for (ch = 'a'; ch <= 'f'; ch++)
+{
+putchar(ch);
 }
 putchar('\n');
 return (0);
