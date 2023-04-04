@@ -1,24 +1,20 @@
-/*
-Write a program that prints the alphabet in lowercase, followed by a new line.
-
-    Print all the letters except q and e
-    You can only use the putchar function (every other function (printf, puts, etc…) is forbidden)
-    All your code should be in the main function
-    You can only use putchar twice in your code
-*/
-
 #include <stdio.h>
+
+/**
+* main - Alphabet between "a" and "z", except "q" and "e"
+* Return: 0 for success
+*/
 
 int main(void)
 {
-    char alf = 'a';
-    while (alf <= 'z')
-    {
-        if (alf == 'e' || alf == 'q')
-            alf++;
-        putchar(alf);
-        alf++;
-    }
-    putchar('\n');
-    return 0;
+char alf = 'a';
+while (alf <= 'z')
+{
+if (alf == 'e' || alf == 'q')
+alf++;
+putchar(alf);
+alf++;
+}
+putchar('\n');
+return (0);
 }
