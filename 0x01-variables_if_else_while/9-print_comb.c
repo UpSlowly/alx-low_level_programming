@@ -1,33 +1,21 @@
-/*
-Write a program that prints all possible combinations of single-digit numbers.
-
-    Numbers must be separated by ,, followed by a space
-    Numbers should be printed in ascending order
-    You can only use the putchar function (every other function (printf, puts, etc…) is forbidden)
-    All your code should be in the main function
-    You can only use putchar four times maximum in your code
-    You are not allowed to use any variable of type char
-*/
-
 #include <stdio.h>
-
+/**
+* main - Print numbers 0 to 9 separated by a comma
+*
+* Return: 0 for success
+*/
 int main(void)
 {
-    int singdgt = 0;
-    while (singdgt <= 10)
-    {
-        putchar(singdgt + 48);
-
-        if (singdgt != 10)
-        {
-            putchar(',');
-            putchar(' ');
-        }
-        singdgt++;
-    }
-    putchar('\n');
-
-    return 0;
+int digit;
+for (digit = 0; digit <= 9; digit++)
+{
+putchar(digit + '0');
+if (digit != 9)
+{
+putchar(44);
+putchar(32);
 }
-
-
+}
+putchar('\n');
+return (0);
+}
