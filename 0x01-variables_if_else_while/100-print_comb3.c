@@ -1,28 +1,28 @@
 #include <stdio.h>
 /**
-* main - Print numbers from 00 to 99 without repeating
-* Return: 0 for success
-*/
+ * main - Print numbers from 00 to 99 without repeating
+ * Return: 0 for success
+ */
 
 int main(void)
+
 {
-int diffcomb = 0, diffcomb1;
-while (diffcomb <= 24)
+int digit;
+for (digit = 1; digit < 100; digit++)
 {
-diffcomb1 = 0;
-while (diffcomb1 <= 24)
+int first, last, reversed;
+first = digit / 10;
+last = digit % 10;
+reversed = (last * 10) + first;
+if (digit < reversed)
 {
-if (diffcomb != diffcomb1 && diffcomb < diffcomb1)
+putchar((digit / 10) + '0');
+putchar((digit % 10) + '0');
+if (digit != 89)
 {
-putchar(diffcomb + 48);
-putchar(diffcomb1 + 48);
-if (diffcomb + diffcomb1 != 24)
-{
-putchar(',');
-putchar(' ');
+putchar(44);
+putchar(32);
 }
-}
-diffcomb1++;
 }
 }
 putchar('n');
