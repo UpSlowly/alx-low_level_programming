@@ -5,16 +5,18 @@
  *
  * Return: Value of the last digit.
  */
-int print_last_digit(int val)
+int print_last_digit(int n)
 {
-int lastdgt;
-if (val < 0)
-lastdgt = -1 * (val % 10);
-else
-{
-lastdgt = val % 10;
-_putchar(lastdgt + '0');
-return (lastdgt);
-}
-return (0);
+
+    n = n % 10;
+
+    if (n < 0)
+    {
+        n = -n;
+    }
+    else
+    {
+        _putchar(n + '0');
+    }
+    return (n);
 }
